@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <style media="screen">
+            
+            #userimage {
+                margin: 50px auto 20px auto;
+                border-radius: 50%;
+                cursor: auto;
+            }
+            .Search {
+              padding-top: 64px;
+            }
+            .main-search{
+              padding: 50px 300px 10px 300px;
+            }
+            section {
+                padding: 50px 100px;
+            }
+            .acc {
+              font-size: 40px !important;
+            }
+            .input-field .prefix {
+              font-size: 2.5rem;
+            }
+
+            @media (max-width: 990px) {
+                section {
+                  padding: 50px 50px;
+                }
+                .main-search{
+                  padding: 50px 50px 10px 50px;
+                }
+            }
+        </style>
+        <title>Movies</title>
+    </head>
+    <body>
+        <nav>
+           <div class="nav-wrapper">
+            <div class="container">
+                <a href="#" data-target="slide-out" class="sidenav-trigger show-on-medium-and-up"><i class="acc material-icons">account_circle</i></a>
+                <a href="#" class="brand-logo center">Movies</a>
+            </div>
+           </div>
+        </nav>
+        <section class="main-search">
+          <div class="row">
+            <div class="input-field col s12">
+              <i class="material-icons prefix">search</i>
+              <input placeholder="Enter Search Text" id="search_text" type="text" class="validate center-align">
+            </div>
+          </div>
+        </section>
+        
+        <ul id="slide-out" class="sidenav">
+             <div class="row Search">
+                <div class="col s12">
+                  <ul class="tabs">
+                    <li class="tab col s6"><a href="#search">Search</a></li>
+                    <li class="tab col s6"><a class="active" href="#user">User</a></li>
+                  </ul>
+                </div>
+            </div>
+            <div id="search" class="row">
+                <div class="col s12">
+                    <div class="input-field col s12">
+                      <input placeholder="Enter Movie Name" id="first_name" type="text" class="validate center-align">
+                      <label for="movie_name">Movie Name</label>
+                    </div>
+                </div>
+                <div class="input-field col s12">
+                    <select id="genre">
+                      <option value="" selected>Choose your genre</option>
+                      <option value="1">Option 1</option>
+                      <option value="2">Option 2</option>
+                      <option value="3">Option 3</option>
+                    </select>
+                    <label>Genres Select</label>
+                 </div>
+                 <div class="input-field col s12">
+                     <select id="year">
+                       <option value="" selected>Choose your year</option>
+                       <option value="1">Option 1</option>
+                       <option value="2">Option 2</option>
+                       <option value="3">Option 3</option>
+                     </select>
+                     <label>year Select</label>
+                  </div>
+                  <div class="input-field col s12">
+                      <select id="rating">
+                        <option value="" selected>Choose your rating</option>
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                        <option value="3">Option 3</option>
+                      </select>
+                      <label>rating Select</label>
+                  </div>
+                  <div class="col s12 center-align">
+                      <a id="search-btn" class="waves-effect waves-light btn-large"><i class="material-icons right">search</i>Search</a>
+                  </div>
+            </div>
+
+
+            <div id="user" class="row">
+                <div id="login_form" class="row">
+                  <img id='userimage' class="materialboxed" width="200" height="200" src="sample-1.jpg">
+                    <div class="col s12">
+                        <div class="col s12">
+                            <div class="input-field col s12">
+                              <input placeholder="Enter User Name" id="user_name" type="text" class="validate center-align">
+                              <label for="user_name">User Name</label>
+                            </div>
+                        </div>
+                        <div class="col s12">
+                            <div class="input-field col s12">
+                              <input placeholder="Enter Password" id="pass" type="password" class="validate center-align">
+                              <label for="pass">Password</label>
+                            </div>
+                        </div>
+                        <div class="col s12 center-align">
+                            <a id="search-btn" class="waves-effect waves-light btn-large">Login</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+         </ul>
+
+        <section class="main">
+             <div class="row">
+               <div class="col s12 l8">
+                 <div class="image">
+                   <img src="sample-1.jpg" style="width: 100%; max-width: 500px" alt= "movie image">
+                 </div>
+                 <div class="detail">
+                   <h4>Name</h4>
+                   <h5>genres:</h5>
+                   <h5>directors:</h5>
+                   <h5>runtime:</h5>
+                   <h5>ratings:</h5>
+                   <h5>number of ratings:</h5>
+                 </div>
+               </div>
+               <div class="col s12 l4">
+                 <div class="recommendations">
+                   <div class="col s12 l6">
+                    <div class="card">
+                      <div class="card-image">
+                        <img src="sample-1.jpg">
+                        <span class="card-title">Card Title</span>
+                      </div>
+                      <div class="card-content">
+                        <p>I am a very simple card. I am good at containing small bits of information.
+                        I am convenient because I require little markup to use effectively.</p>
+                      </div>
+                      <div class="card-action">
+                        <a href="#">This is a link</a>
+                      </div>
+                    </div>
+                </div>
+                
+                <div class="col s12 l6">
+                   <div class="card">
+                     <div class="card-image">
+                       <img src="sample-1.jpg">
+                       <span class="card-title">Card Title</span>
+                     </div>
+                     <div class="card-content">
+                       <p>I am a very simple card. I am good at containing small bits of information.
+                       I am convenient because I require little markup to use effectively.</p>
+                     </div>
+                     <div class="card-action">
+                       <a href="#">This is a link</a>
+                     </div>
+                   </div>
+               </div>
+               
+               <div class="col s12 l6">
+                  <div class="card">
+                    <div class="card-image">
+                      <img src="sample-1.jpg">
+                      <span class="card-title">Card Title</span>
+                    </div>
+                    <div class="card-content">
+                      <p>I am a very simple card. I am good at containing small bits of information.
+                      I am convenient because I require little markup to use effectively.</p>
+                    </div>
+                    <div class="card-action">
+                      <a href="#">This is a link</a>
+                    </div>
+                  </div>
+              </div>
+                 </div>
+               </div>
+             </div>
+        </section>
+
+
+
+
+
+
+        <script
+          src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+          integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
+          crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $('.sidenav').sidenav();
+                $('.tabs').tabs();
+                $('select').formSelect();
+                });
+        </script>
+    </body>
+</html>
